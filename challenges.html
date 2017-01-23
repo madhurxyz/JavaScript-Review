@@ -28,13 +28,18 @@
     var letterArray = [];
     function getNameTitle(letter, nameTitle) {
         for (i=0;i<nameTitle.count;i++) {
-            for (j=0;j<nameTitle[i].count;j++) {
-                if (nameTitle[i][j] == letter) {
-                    letterArray.push(nameTitle[i]);
-                }
-            }
+            // var word = nameTitle[i].object3.name;
+            // if (nameTitle[i].object3.name == letter) {
+            //     letterArray.push(nameTitle[i]);
+            // }
+            // for (j=0;j<nameTitle[i].count;j++) {
+            //     if (nameTitle[i][j] == letter) {
+            //         letterArray.push(nameTitle[i]);
+            //     }
+            // }
         }
-        return letterArray;
+        var word = nameTitle[i].name[0];
+        return word;
     }
     var letter = prompt("Enter a letter: ");
     var getLetterArray = getNameTitle(letter, nameTitle);
