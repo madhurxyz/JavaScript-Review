@@ -3,6 +3,16 @@
         
     // Create a function that takes a name and title and returns an object containing these two properties
     // The object should look something like: {name: "Rudolf", title: "leader of the pack"}
+    function objectCreator(name, title) {
+        var obj = {
+            name: name,
+            title: title
+        };
+        return obj;
+    }
+    var object1 = objectCreator("Rudolf", "Leader of the Pack");
+    var object2 = objectCreator("Enzo", "Cutter of Hair");
+    console.log(object1);
     
     // Define an array (nameTitle) then push 5 name/title objects from your function.
     
