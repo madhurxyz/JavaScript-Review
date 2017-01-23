@@ -25,6 +25,22 @@
     
     // Write a function that takes a letter (a, b, c, etc) and returns an array containg all of the
     // names from nameTitle that begin with that letter. Use array.filter. 
+    var letterArray = [];
+    function getNameTitle(letter, nameTitle) {
+        for (i=0;i<nameTitle.count;i++) {
+            for (j=0;j<nameTitle[i].count;j++) {
+                if (nameTitle[i][j] == letter) {
+                    letterArray.push(nameTitle[i]);
+                }
+            }
+        }
+        return letterArray;
+    }
+    var letter = prompt("Enter a letter: ");
+    var getLetterArray = getNameTitle(letter, nameTitle);
+    console.log(getLetterArray);
+
+
     
     // Write a function takes a title, and returns an array of all objects that have a matching title. 
     // Use filter again. 
