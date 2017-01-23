@@ -15,7 +15,7 @@
     console.log(object1);
     
     // Define an array (nameTitle) then push 5 name/title objects from your function.
-    var count = 5;
+    var count = 12;
     var nameTitle = [];
     for (i=0; i<count; i++) {
         var object3 = objectCreator("Name" + (i + 1), "Title" + (i + 1));
@@ -25,25 +25,18 @@
     
     // Write a function that takes a letter (a, b, c, etc) and returns an array containg all of the
     // names from nameTitle that begin with that letter. Use array.filter. 
-    var letterArray = [];
-    function getNameTitle(letter, nameTitle) {
-        for (i=0;i<nameTitle.count;i++) {
-            // var word = nameTitle[i].object3.name;
-            // if (nameTitle[i].object3.name == letter) {
-            //     letterArray.push(nameTitle[i]);
-            // }
-            // for (j=0;j<nameTitle[i].count;j++) {
-            //     if (nameTitle[i][j] == letter) {
-            //         letterArray.push(nameTitle[i]);
-            //     }
-            // }
+    var letter = prompt("Enter a letter: ")
+    function containsLetter(letter, nameTitle) {
+        var letterArray = [];
+        for (i=0;i<nameTitle.length;i++) {
+            var name = nameTitle[i].name;
+            if (name[0].toLowerCase() == letter.toLowerCase()) {
+                letterArray.push(name);
+            }
         }
-        var word = nameTitle[i].name[0];
-        return word;
+        return letterArray;
     }
-    var letter = prompt("Enter a letter: ");
-    var getLetterArray = getNameTitle(letter, nameTitle);
-    console.log(getLetterArray);
+    console.log(containsLetter(letter, nameTitle));
 
 
     
