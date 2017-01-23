@@ -24,19 +24,27 @@
     console.log(nameTitle);
     
     // Write a function that takes a letter (a, b, c, etc) and returns an array containg all of the
-    // names from nameTitle that begin with that letter. Use array.filter. 
+    // names from nameTitle that begin with that letter. Use array.filter.
+    var instructors = [{name: "Adam", title: "Product College Lead"},
+                {name: "Alan", title: "Back-End Instructor"},
+                {name: "Mitchell", title: "Front-End Instructor"},
+                {name: "Nikolas", title: "iOS Instructor"},
+                {name: "Dan", title: "Product"}];
+
     var letter = prompt("Enter a letter: ")
     function containsLetter(letter, nameTitle) {
         var letterArray = [];
-        for (i=0;i<nameTitle.length;i++) {
-            var name = nameTitle[i].name;
+        for (i=0;i<instructors.length;i++) {
+            var name = instructors[i].name;
             if (name[0].toLowerCase() == letter.toLowerCase()) {
                 letterArray.push(name);
+            } else {
+                console.log("Does Not Contain Letter");
             }
         }
         return letterArray;
     }
-    console.log(containsLetter(letter, nameTitle));
+    console.log(containsLetter(letter, instructors));
 
 
     
