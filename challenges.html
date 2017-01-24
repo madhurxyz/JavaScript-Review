@@ -31,15 +31,13 @@
                 {name: "Nikolas", title: "iOS Instructor"},
                 {name: "Dan", title: "Product"}];
 
-    var letter = prompt("Enter a letter: ")
-    function containsLetter(letter, nameTitle) {
+    var letter = prompt("Enter a letter: ");
+    function containsLetter(letter, instructors) {
         var letterArray = [];
         for (i=0;i<instructors.length;i++) {
             var name = instructors[i].name;
             if (name[0].toLowerCase() == letter.toLowerCase()) {
                 letterArray.push(name);
-            } else {
-                console.log("Does Not Contain Letter");
             }
         }
         return letterArray;
@@ -49,7 +47,20 @@
 
     
     // Write a function takes a title, and returns an array of all objects that have a matching title. 
-    // Use filter again. 
+    // Use filter again.
+
+    var newTitle = prompt("Enter title: ");
+    function getObject(title, instructors) {
+        var titleArray = [];
+        for (i=0;i<instructors.length;i++) {
+            var title = instructors[i].title;
+            if (newTitle == title) {
+                titleArray.push(instructors[i]);
+            }
+        }
+        return titleArray;
+    }
+    console.log(getObject(newTitle, instructors));
     
     // Write a function that returns an array containing strings made from the names and titles. 
     // Each string should look like: "Name Title" or "Diana the duchess of york" or something similar. 
