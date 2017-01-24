@@ -122,12 +122,12 @@
     // Write a function that returns an aray of all numbers 0.5 and above. use filter, map, or reduce.
     var aboveFifty = [];
     function getAboveFifty(randArray) {
-        for (i=0;i<randArray;i++) {
+        for (i=0;i<randArray.length;i++) {
             if (randArray[i]>=50) {
-                aboveArray.push(randArray[i])
+                aboveFifty.push(randArray[i]);
             }
         }
-        return aboveArray;
+        return aboveFifty;
     }
     console.log(getAboveFifty(randArray));
 
