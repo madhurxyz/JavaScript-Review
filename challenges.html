@@ -143,7 +143,15 @@
     }
     console.log(getBelowFifty(randArray));
     
-    // Write a function that returns the total of all random numbers. Use filter, map, or reduce. 
+    // Write a function that returns the total of all random numbers. Use filter, map, or reduce.
+    var sum = 0;
+    function getSum(randArray) {
+        for (i=0;i<randArray.length;i++) {
+            sum += randArray[i];
+        }
+        return sum;
+    }
+    console.log(getSum(randArray));
     
     // Write a function that returns the average of all of the random numbers. Use filter, map, or reduce.
 
