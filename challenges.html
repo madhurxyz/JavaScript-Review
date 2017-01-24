@@ -131,7 +131,17 @@
     }
     console.log(getAboveFifty(randArray));
 
-    // Write a function that returns an array of all numbers below 0.5. Use filter, map, or reduce. 
+    // Write a function that returns an array of all numbers below 0.5. Use filter, map, or reduce.
+    var belowFifty = [];
+    function getBelowFifty(randArray) {
+        for (i=0;i<randArray.length;i++) {
+            if (randArray[i]<50) {
+                belowFifty.push(randArray[i]);
+            }
+        }
+        return belowFifty;
+    }
+    console.log(getBelowFifty(randArray));
     
     // Write a function that returns the total of all random numbers. Use filter, map, or reduce. 
     
