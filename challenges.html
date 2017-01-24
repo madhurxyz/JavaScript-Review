@@ -119,8 +119,18 @@
     var arrayLength = 100;
     console.log(getRandArray(arrayLength));
 
-    // Write a function that returns an aray of all numbers 0.5 and above. use filter, map, or reduce. 
-    
+    // Write a function that returns an aray of all numbers 0.5 and above. use filter, map, or reduce.
+    var aboveFifty = [];
+    function getAboveFifty(randArray) {
+        for (i=0;i<randArray;i++) {
+            if (randArray[i]>=50) {
+                aboveArray.push(randArray[i])
+            }
+        }
+        return aboveArray;
+    }
+    console.log(getAboveFifty(randArray));
+
     // Write a function that returns an array of all numbers below 0.5. Use filter, map, or reduce. 
     
     // Write a function that returns the total of all random numbers. Use filter, map, or reduce. 
