@@ -25,6 +25,8 @@
     
     // Write a function that takes a letter (a, b, c, etc) and returns an array containg all of the
     // names from nameTitle that begin with that letter. Use array.filter.
+
+    //didn't use .filter()
     var instructors = [{name: "Adam", title: "Product College Lead"},
                 {name: "Alan", title: "Back-End Instructor"},
                 {name: "Mitchell", title: "Front-End Instructor"},
@@ -49,6 +51,7 @@
     // Write a function takes a title, and returns an array of all objects that have a matching title. 
     // Use filter again.
 
+    //didn't use .filter()
     var newTitle = prompt("Enter title: ");
     function getObject(title, instructors) {
         var titleArray = [];
@@ -65,6 +68,8 @@
     // Write a function that returns an array containing strings made from the names and titles. 
     // Each string should look like: "Name Title" or "Diana the duchess of york" or something similar. 
     // Use array.map().
+
+    //didn't use .map()
     var name5 = "";
     var title5 = "";
     var string = "";
@@ -81,7 +86,18 @@
     console.log(getString(instructors));
     
     // Create an array of random numbers. Bonus: Use a loop and add 100 random numbers or write a function to return an array of any number of random numbers. 
-    
+
+    //part1
+    var rand = Math.floor((Math.random()*100) + 1);
+    var randArray = [];
+    randArray.push(rand);
+    rand = Math.floor((Math.random()*100) + 1);
+    randArray.push(rand);
+    rand = Math.floor((Math.random()*100) + 1);
+    randArray.push(rand);
+    console.log(randArray);
+
+
     // Write a function that returns an aray of all numbers 0.5 and above. use filter, map, or reduce. 
     
     // Write a function that returns an array of all numbers below 0.5. Use filter, map, or reduce. 
