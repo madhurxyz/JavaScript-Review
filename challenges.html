@@ -99,13 +99,25 @@
 
 
     //part 2
-    var rand = 0;
-    randArray = [];
-    for (i=0;i<100;i++) {
-        rand = Math.floor((Math.random()*100)+1);
-        randArray.push(rand);
+    // var rand = 0;
+    // randArray = [];
+    // for (i=0;i<100;i++) {
+    //     rand = Math.floor((Math.random()*100)+1);
+    //     randArray.push(rand);
+    // }
+    // console.log(randArray);
+
+    //part 3
+    var randArray = [];
+    function getRandArray(arrayLength) {
+        var rand = Math.floor((Math.random()*100) + 1);
+        for (i=0;i<arrayLength;i++) {
+            randArray.push(rand);
+        }
+        return randArray;
     }
-    console.log(randArray);
+    var arrayLength = 100;
+    console.log(getRandArray(arrayLength));
 
     // Write a function that returns an aray of all numbers 0.5 and above. use filter, map, or reduce. 
     
