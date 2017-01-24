@@ -154,6 +154,16 @@
     console.log(getSum(randArray));
     
     // Write a function that returns the average of all of the random numbers. Use filter, map, or reduce.
+    var avgSum = 0;
+    var average = 0;
+    function getAverage(randArray) {
+        for (i=0;i<randArray.length;i++) {
+            avgSum += randArray[i];
+        }
+        average = avgSum/randArray.length;
+        return average;
+    }
+    console.log(getAverage(randArray));
 
 
 </script>
