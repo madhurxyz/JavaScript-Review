@@ -1,4 +1,3 @@
-    <script>
     //Challenges:
         
     // Create a function that takes a name and title and returns an object containing these two properties
@@ -164,6 +163,3 @@
         return average;
     }
     console.log(getAverage(randArray));
-
-
-</script>
